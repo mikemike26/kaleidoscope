@@ -1,0 +1,32 @@
+@import mixin
+@import template
+
+h1, h2
+  @include heading
+  font-weight: bold
+  margin: 0
+  padding: 0
+h1
+  font-size: 4em
+  text-transform: uppercase
+h2
+  font-size: 3em
+
+h3
+  @include caption
+  font-style: italic
+  font-size: 1.5em
+  text-transform: lowercase
+  font-weight: normal
+  margin: 0
+  padding: 0
+
+p, li, a
+  @include copy
+  margin: 0
+  padding: 0
+
+
+#design
+  width: 40%
+  margin: 0 auto
