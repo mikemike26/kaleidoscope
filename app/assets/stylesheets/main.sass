@@ -1,11 +1,20 @@
 @import mixin
 @import template
+html
+  width: 100%
+  //background: url(shattered.png) repeat
+  font-size: 16px
+body
+  width: 100%
+  margin: 0
+  padding: 0
 
 h1, h2
-  @include heading
+  font-family: $heading
   font-weight: bold
   margin: 0
   padding: 0
+  color: $text
 h1
   font-size: 4em
   text-transform: uppercase
@@ -13,20 +22,51 @@ h2
   font-size: 3em
 
 h3
-  @include caption
+  font-family: $caption
   font-style: italic
   font-size: 1.5em
   text-transform: lowercase
   font-weight: normal
   margin: 0
   padding: 0
+  color: $text
 
-p, li, a
-  @include copy
+p, a
+  font-family: $copy
   margin: 0
   padding: 0
+  color: $text
 
+a
+  text-decoration: none
+  color: $accent1
+
+ul, li
+  font-family: $copy
+  list-style-type: none
+  margin: 0
+  padding: 0
+  color: $text
+
+#site_bar
+  display: none
 
 #design
   width: 40%
   margin: 0 auto
+
+#page_container
+  width: 100%
+  #page
+    width: 100%
+    .center1
+      max-width: 1280px
+      width: 80%
+      margin: 0 auto
+      background: url(shattered.png) repeat
+
+
+
+
+
+
