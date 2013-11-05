@@ -31,3 +31,4 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 group :production do
   gem 'fog'
 end
+gem 'refinerycms-products', :path => 'vendor/extensions'

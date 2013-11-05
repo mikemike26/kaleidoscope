@@ -1,5 +1,8 @@
-<h1 id='logo'>
-  <%= link_to Refinery::Core.site_name, refinery.root_path %>
-</h1>
-<%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
-<div class="clearfix"></div>
+<div id="head_wrapper">
+  <h1 id='logo'>
+    <%= link_to (image_tag ("/assets/logo.png")), refinery.root_path %>
+        <span>Intentional Health Products</span>
+  </h1>
+  <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+  <div class="clearfix"></div>
+</div>

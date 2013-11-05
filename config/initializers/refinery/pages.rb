@@ -45,7 +45,7 @@ Refinery::Pages.configure do |config|
   # Set this to true to fully expand the page hierarchy in the admin
   # config.auto_expand_admin_tree = true
 
-  config.layout_template_whitelist = ["application, :about, :services, :contact"]
+  config.layout_template_whitelist = ["application, :about, :services, :contact, :product"]
 
   config.use_layout_templates = true
 

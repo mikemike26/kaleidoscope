@@ -1,142 +1,63 @@
 @import mixin
 @import template
-
-
-#home-page
-  h2
-    font-family: 'raleway', sans-serif
-    font-weight: 200
-    text-transform: uppercase
-    font-size: 5em
-    font-size: 6vw
-    text-align: center
-    margin-top: 1.2em
-  h3
-    font-size: 2.1em
-    font-size: 2.6vw
-    text-align: center
-    margin-bottom: 3em
-    span
-      display: block
-      position: absolute
-      font-size: 0.6em
-      left: 55%
-      margin-top: 0.4em
-      -webkit-transform: rotate(15deg)
-      -moz-transform: rotate(15deg)
-      -o-transform: rotate(15deg)
-      -ms-transform: rotate(15deg)
-      transform: rotate(15deg)
-  #hex-grid
-    z-index: 5
+#page
+  .top-content
     width: 100%
-    overflow: hidden
-    padding-bottom: 70px
-    position: relative
-    margin: 0 auto
-    margin-bottom: 2.5em
-    -webkit-transition: all ease 500ms
-    -moz-transition: all ease 500ms
-    -o-transition: all ease 500ms
-    -ms-transition: all ease 500ms
-    transition: all ease 500ms
-    article 
-      padding-top: 1em
-      width: 100%
-      margin: 0 auto
+    border-bottom: 3px solid #e6e7e6
+    padding-bottom: 2.5em
+    img
+      display: block
+      max-width: 371px
+      width: 37%
+      height: auto
+      margin-top: -7em
+      z-index: 5
+      float: left
+    h2
+      color: $text
+      width: 6.3em
+      float: left
+      font-weight: normal
+      margin: 1.1em 0 0 7%
+      font-size: 5.3em
+      font-size: 6.7vw
+      line-height: 1em
+      white-space: nowrap
+      span
+        color: $accent1
+  .bot-content
+    width: 100%
+    background: url(background_texture.jpg) repeat left top
+    h2
+      color: $accent2
+      font-size: 2em
+      padding: 1em 0 1em 0
+    h3
+      color: lighten($primary, 15%)
+      padding-bottom: 5px
+      margin-bottom: 10px
+    p
+      color: $text
+      margin-bottom: 1em
+    .left-box, .right-box
+      padding-bottom: 4em
+      width: 45%
+    .left-box
+      float: left
+    .right-box
+      float: right
+    .btn
+      display: block
+      color: #fff
+      background: $accent2
+      width: 8em
       text-align: center
-    .grid_item 
-      width: 24.6%
-      height: 22em
-      position: relative
-      display: inline-block
-    .hexagon2 
-      position: absolute
-      width: 100%
-      height: 33em
-      top: -85px
-    .hexagon 
-      overflow: hidden
-      visibility: hidden
-      -webkit-transform: rotate(120deg)
-      -moz-transform: rotate(120deg)
-      -o-transform: rotate(120deg)
-      -ms-transform: rotate(120deg)
-      transform: rotate(120deg)
-      cursor: pointer
-    .hexagon-in1 
-      overflow: hidden
-      width: 100%
-      height: 100%
-      -webkit-transform: rotate(-60deg)
-      -moz-transform: rotate(-60deg)
-      -o-transform: rotate(-60deg)
-      -ms-transform: rotate(-60deg)
-      transform: rotate(-60deg)
-    .hexagon-in2 
-      overflow: hidden
-      width: 100%
-      height: 100%
-      background-color: #fff
-      background-repeat: no-repeat
-      background-position: 50%
-      -webkit-background-size: 125%
-      -moz-background-size: 125%
-      visibility: visible
-      -webkit-transform: rotate(-60deg)
-      -moz-transform: rotate(-60deg)
-      -o-transform: rotate(-60deg)
-      -ms-transform: rotate(-60deg)
-      transform: rotate(-60deg)
-      -webkit-transition: all 0.5s ease
-      -moz-transition: all 0.5s ease
-      -o-transition: all 0.5s ease
-      -ms-transition: all 0.5s ease
-      transition: all 0.5s ease
-      &:hover 
-        -webkit-box-shadow: inset 0 0 0 0px #B0DAD4
-        box-shadow: inset 0 0 0 0px #B0DAD4
-      &.one
-        -webkit-box-shadow: inset 0 0 0 200px darken($accent3, 0%)
-        box-shadow: inset 0 0 0 200px darken($accent3, 0%)
-        &:hover 
-          -webkit-box-shadow: inset 0 0 0 0px lighten($accent3, 60%)
-          box-shadow: inset 0 0 0 0px lighten($accent3, 60%)
-      &.two
-        -webkit-box-shadow: inset 0 0 0 200px darken($accent3, 17%)
-        box-shadow: inset 0 0 0 200px darken($accent3, 17%)
-        &:hover 
-          -webkit-box-shadow: inset 0 0 0 0px lighten($accent3, 77%)
-          box-shadow: inset 0 0 0 0px lighten($accent3, 77%)
-      &.three
-        -webkit-box-shadow: inset 0 0 0 200px darken($accent2, 0%)
-        box-shadow: inset 0 0 0 200px darken($accent2, 0%)
-        &:hover 
-          -webkit-box-shadow: inset 0 0 0 0px lighten($accent2, 60%)
-          box-shadow: inset 0 0 0 0px lighten($accent2, 60%)
-      &.four
-        -webkit-box-shadow: inset 0 0 0 200px darken($accent1, 0%)
-        box-shadow: inset 0 0 0 200px darken($accent1, 0%) 
-        &:hover 
-          -webkit-box-shadow: inset 0 0 0 0px lighten($accent1, 60%)
-          box-shadow: inset 0 0 0 0px lighten($accent1, 60%)  
-      p
-        z-index: 10
-        position: relative
-        top: 9em
-        color: white
-        font-size: 1.6em
-        text-transform: uppercase
-        font-weight: normal
-        font-family: $heading
+      padding: 8px
+      font-size: 1.5em
+      @include border-radius(4px)
+      &:hover
+        background: darken($accent2, 15%)
 
-  #bot-content
-    background: url(furley_bg.png) repeat
-    padding: 12em 0 3em 0
-    margin-bottom: -12.3em
-    z-index: 1
-    position: relative
-    top: -12.3em
 
 
 
